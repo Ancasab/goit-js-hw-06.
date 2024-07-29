@@ -31,21 +31,18 @@ const images = [
 const gallery = document.querySelector('.gallery');
 console.log(gallery);
 
-// Creăm un șablon HTML folosind template strings
 const imageTemplate = (image) => `
   <li>
     <img src="${image.url}" alt="${image.alt}">
   </li>
 `;
 
-// Creăm un șir HTML care conține toate elementele listei
+
 const galleryHTML = images.map(image => imageTemplate(image)).join('');
 
 console.log(galleryHTML);
 
- // Adăugăm toate elementele la DOM într-o singură operație
 gallery.insertAdjacentHTML('beforeend', galleryHTML);
 console.log(gallery);
 
-//stil simplu folosind flexbox
 gallery.style.display = 'flex';

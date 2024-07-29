@@ -16,24 +16,20 @@ const counterValueElement = document.getElementById('value');
 const decrementButton = document.querySelector('[data-action="decrement"]');
 const incrementButton = document.querySelector('[data-action="increment"]');
 
-// Inițializare valoarea contorului
+
 let counterValue = 0;
 
-// Funcție callback pentru actualizarea valorii în interfață
+
 function updateCounterValue(newValue) {
     counterValueElement.textContent = newValue;
     console.log('New counter:', newValue);
 }
 
-// Click handler pentru butonul de decrementare
 decrementButton.addEventListener('click', () => {
-//   counterValue -=1;
   updateCounterValue(counterValue-=1);
 });
 
-// Click handler  pentru butonul de incrementare
 incrementButton.addEventListener('click', () =>{
-//   counterValue +=1;
   updateCounterValue(counterValue+=1);
 });
 
